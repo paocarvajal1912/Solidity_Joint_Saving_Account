@@ -52,7 +52,8 @@ contract JointSavings {
         Define a `require` statement that checks if the `balance` is sufficient to accomplish the withdraw operation. 
         If there are insufficient funds, the text `Insufficient funds!` is returned.
         */
-        require(balance >= amount, "Insufficient funds!");
+        
+        require(contractBalance >= amount, "Insufficient funds!");
 
         /*
         Add and `if` statement to check if the `lastToWithdraw` is not equal to (`!=`) to `recipient` 
@@ -70,7 +71,7 @@ contract JointSavings {
 
         // Call the `contractBalance` variable and set it equal to the balance of the contract by using `address(this).balance` 
         // to reflect the new balance of the contract.
-        contractBalance=address(this).balance
+        contractBalance=address(this).balance;
     }
 
     // Define a `public payable` function named `deposit`.
@@ -79,7 +80,7 @@ contract JointSavings {
         /*
         Call the `contractBalance` variable and set it equal to the balance of the contract by using `address(this).balance`.
         */
-        // YOUR CODE HERE!
+        contractBalance=address(this).balance;
     }
 
     /*
@@ -88,10 +89,12 @@ contract JointSavings {
     function setAccounts(address payable account1, address payable account2) public{
 
         // Set the values of `accountOne` and `accountTwo` to `account1` and `account2` respectively.
-        // YOUR CODE HERE!
+        accountOne=account1;
+        accountTwo=account2;
     }
 
     /*
     Finally, add the **default fallback function** so that your contract can store Ether sent from outside the deposit function.
     */
-    // YOUR CODE HERE!
+    function() external payable {}
+}

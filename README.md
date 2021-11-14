@@ -22,7 +22,19 @@ https://remix.ethereum.org/#optimize=false&runs=200&evmVersion=null&version=solj
 
 ## Usage
 
-In order to operate the contract, you should first compile it, and then deploy it. Once you did that, same samples operations you can do with it are as follows:
+In order to operate the contract, you should first compile it, and then deploy it, as shown in the two screenshot below.
+
+**Compilation:** by pressing the compilation button.
+
+![Compilation](Execution_Results/Compilation.png)
+
+**Deployment:** by clicking on the Deploy button.
+
+![Deploy](Execution_Results/Deploy.png)
+
+
+
+After deploying, the following are operations you can perform:
 
 1. **Set up accounts using the ```setAccounts``` function.** In the screenshot below we set up two dummy account1 and account2 as 
 
@@ -33,30 +45,30 @@ In order to operate the contract, you should first compile it, and then deploy i
 and run the function using the “transact button”. The output of the terminal confirming the execution can be seen in the long yellow rectangle below.
 
 
-![setAccounts](Images/SetAccounts.png)
+![setAccounts](Execution_Results/SetAccounts.png)
 
 
 2. **Deposit currency using the ```Deposit``` function.** Here we show three different transactions.
 
     2.1 **Send 1 ether as wei.** One ether is equivalent to 1,000,000,000,000,000,000 (10^18) wei. So we select the wei token and deposit in the account. In the screenshot below you will be able to follow the flow of the transactions. It includes 3 screenshots in one image: First on the left, the amount and the highlight of the Deposit buttom that when clicked execute the transaction. Second at the bottom, the log record after the Deposit transaction indicating the execution of the function. Third to the right, the new balance in the joint account after pressing of the ContractBalance button.
     
-![Transaction1](Images/Transaction1.png)
+![Transaction1](Execution_Results/Transaction1.png)
     
    
     2.2 **Send 10 ether as wei.** Similarly than transaction 2.1, here we deposit 10 times 1,000,000,000,000,000,000 (10^19 wei). In the screenshot below you can see the contract balance of 11,000,000,000,000,000,000 wei after the execution.
     
-![Transaction2](Images/Transaction2.png)
+![Transaction2](Execution_Results/Transaction2.png)
 
     2.3. Send 5 ether. In this last deposit we choose another token, the ether. You can see the deefinition of amount, and the new contract balance after the deposit in the screenshot below.
     
-![Transaction3](Images/Transaction3.png)    
+![Transaction3](Execution_Results/Transaction3.png)    
 
 
 3. **Withdrawal money from the contract to any of its two accounts using the _withdraw_ functionality.**
 
     3.1 Withdrawing 5 ether into accountOne. Below you can see the aftermath of the withdrawal, by looking at the contractBalance that got reduced from 16 to 11 ether (in wei counts), the lastWidraw indicator that shows account1, and the last widrawal amount that shows 5 ether (in wei counts).
     
-![Withdrawal1](Images/Withdrawal1.png) 
+![Withdrawal1](Execution_Results/Withdrawal1.png) 
     
     
 
@@ -64,7 +76,7 @@ and run the function using the “transact button”. The output of the terminal
     
     3.2 Withdrawing 10 ether into accountTwo. Similarly here, the aftermath can be seen in the contractBalance, last withdraw and lastWidrawAmount features highlighted in the red rectangle.
     
-![Withdrawal2](Images/Withdrawal2.png) 
+![Withdrawal2](Execution_Results/Withdrawal2.png) 
 
 
 
